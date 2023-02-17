@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  padding-left: 80px;
+  padding-right: 90px;
+  /* background-color: rgb(165, 212, 243); */
+  color: #fff;
+  opacity: 0.5px;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/* LOGO */
+
+.logo {
+  font-size: 35px;
+}
+
+/* NAVBAR MENU */
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: #2e30309d;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+
+/* CHECKBOX HACK */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/*HAMBURGER MENU*/
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* ************************Section1**************** */
+
+.container {
+  width: 100%;
+  /* padding: 0 7%; */
+  /* display:flex; */
+  /* margin: 0; */
+  /* max-width: none; */
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("img/planeFirstImg.jpg");
+background-size: cover;
+background-position: center;
+}
+/* .container:nth-of-type(2n) {
+  background-color: #4badfe;
+} */
+
+/* **********************************************************************FIRST SECTION********************************************************************* */
+.welcome {
+width: 100%;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+text-align: center;
+color: #fff;
+}
+
+.welcome h1{
+  font-size: 70px;
+  margin-top: 10px;
+}
+.welcome p{
+  margin: 20px auto;
+}
+
+button{
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688 ;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+span{
+  background: #009688;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left:0 ;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover span{
+  width: 100%;
+}
+button:hover{
+  border: none;
+}
+
+/* **************************************************END OF SECTION 1************************************************************* */
+
+/* **************************************************SECTION2********************************************************************* */
+
+.container2{
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffffe8;
+
+
+}
+
+.about-section{
+  background: url(img/dentisttsect2.jpg) no-repeat left;
+  background-size: 55%;
+  background-color: #fafafa;
+  overflow: hidden;
+  padding: 100px 0;
+  
+}
+
+.inner-container{
+  width: 55%;
+  float: right;
+  background-color: #fffdfd;
+  padding: 150px;
+}
+
+.inner-container h1{
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+ .text{
+color: #545454;
+ }
+/* **************************************************END OF SECTION 2************************************************************* */
+/* ************************************************** SECTION 3************************************************************* */
+
+.container3{
+  min-height: 50vh;
+  background: #222;
+  font-family: poppins,sans-serif;
+  color: #fff;
+}
+
+/* .services{
+  width:1300px;
+  padding: 80px 60px;
+  margin: auto;
+} */
+
+ h1{
+  text-align: center;
+  font-size: 36px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  position: relative;
+  font-weight: 600;
+  
+}
+
+.services h1:after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width:150px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.cards{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 170px;
+  padding-right: 170px;
+}
+
+.card{
+  width:calc(34% - 22px);
+  background:#f2f2f2 ;
+  color: #333;
+  padding: 20px 12px;
+  margin: 0 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: 3s;
+  position: relative;
+}
+
+.sbox img{
+  font-size: 26px;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 50%;
+  padding: 15px;
+  transition: 0.5s;
+}
+
+.sbox h3{
+  font-size: 24px;
+
+}
+.sbox p{
+  margin: 20px 0;
+}
+
+.card:hover .sbox img{
+  background:rgb(0,184,148);
+  color:#fff;
+  border-color: rgb(0,184,148);
+
+}
+.card:after{
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.card:hover:after{
+  transform: rotate(13deg);
+  background-color: rgb(0,184,148);
+}
+
+/* **************************************************END OF SECTION 2************************************************************* */
+
+
+/* APPLYING MEDIA QUERIES */
+
+@media screen {
+  .inner-container{
+    padding: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color:rgb(36, 35, 35);
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: #494b4b62;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display:block;
+    
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* *******************************************************section1***************************************************** */
+  .welcome{
+    padding-left: 50px;
+padding-right: 50px;    
+  }
+  .welcome h1{
+    font-size: 50px;
+  }
+  .welcome p{
+    font-size: 15px;
+  }
+  button{
+    width: 40%;
+    
+  }
+  /* ****************************************************END OF SECTION1********************************************* */
+
+
+  /* ****************************************************Section2****************************************************** */
+
+  .about-section{
+    background-size: 100%;
+    padding: 10px 45px;
+  }
+
+  .inner-container{
+    width:100%;
+  }
+    /* ****************************************************END OF SECTION1********************************************* */
+
+}
